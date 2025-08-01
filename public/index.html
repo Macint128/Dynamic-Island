@@ -29,7 +29,7 @@
             opacity: 1;
             border: 1px white solid;
             border-radius: 25%;
-            margin-left: 20px;
+            margin-left: 2px;
             margin-top: 10px;
         }
         @keyframes fade-in {
@@ -42,49 +42,12 @@
             50% {opacity: 0.5;}
             100% {opacity: 0;}
         }
-        @keyframes bounce {
-            0%, 100% { transform: scaleY(1); }
-            50% { transform: scaleY(2); }
-        }
         #album.show {
             animation: fade-in 0.25s forwards;
         }
         #album.hide {
             animation: fade-out 0.25s forwards;
         }
-        #volume {
-            width: 30px;
-            height: 30px;
-            position: relative;
-            top: 10px;
-            right: 20px;
-        }
-
-        .bar {
-            width: 3px;
-            height: 30px;
-            background-color: #0f0;
-            border-radius: 2px;
-            margin: 0 2px;
-            display: inline-block;
-            transform-origin: center center;
-            float: right;
-            margin-top: 10px;
-        }
-
-        .bar.show {
-            animation: fade-in 0.25s forwards, bounce 1s infinite ease-in-out;
-        }
-        .bar.hide {
-            animation: fade-in 0.25s forwards;
-        }
-
-        .bar:nth-child(1) { animation-delay: 0s; }
-        .bar:nth-child(2) { animation-delay: 0.1s; }
-        .bar:nth-child(3) { animation-delay: 0.2s; }
-        .bar:nth-child(4) { animation-delay: 0.3s; }
-        .bar:nth-child(5) { animation-delay: 0.4s; }
-        .bar:nth-child(6) { animation-delay: 0.5s; }
     </style>
 </head>
 <body>
