@@ -16,7 +16,7 @@
             background-color: black;
             transition: all 0.25s ease-in-out;
         }
-        #main:hover {
+        #main.hovered {
             width: 350px;
         }
         #main.big {
@@ -58,16 +58,25 @@
     <script>
         const main = document.querySelector("#main");
         const album = document.querySelector("#album");
+        let isHovered = false;
 
         main.addEventListener("mouseenter", () =>{
+            isHovered = true;
+            main.classList.add("hovered")
             album.classList.remove("hide")
             album.classList.add("show")
         });
         main.addEventListener("mouseleave", () =>{
+            isHovered = false;
+            main.classList.remove("hovered")
             album.classList.remove("show")
             album.classList.add("hide")
         });
         main.addEventListener("click", () =>{
+            if (isHovered) {
+                isHovered = false;
+                main.classList.remove(hover)
+            }
             main.classList.toggle("big")
         });
     </script>
