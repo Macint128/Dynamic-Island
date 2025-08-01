@@ -63,14 +63,14 @@
         main.addEventListener("mouseenter", () =>{
             isHovered = true;
             main.classList.add("hovered")
-            album.classList.remove("hide")
+            album.classList.remove("hide","show")
             album.classList.add("show")
         });
         main.addEventListener("mouseleave", () =>{
             isHovered = false;
             main.classList.remove("big")
             main.classList.remove("hovered")
-            album.classList.remove("show")
+            album.classList.remove("show","hide")
             album.classList.add("hide")
         });
         main.addEventListener("click", () =>{
