@@ -23,15 +23,6 @@
             width: 300px;
             height: 200px;
         }
-        #album {
-            width: 50px;
-            height: 50px;
-            opacity: 1;
-            border: 1px white solid;
-            border-radius: 25%;
-            margin-left: 20px;
-            margin-top: 10px;
-        }
         @keyframes fade-in {
             0% {opacity: 0;}
             50% {opacity: 0.5;}
@@ -42,10 +33,32 @@
             50% {opacity: 0.5;}
             100% {opacity: 0;}
         }
+        #album {
+            width: 50px;
+            height: 50px;
+            opacity: 1;
+            border: 1px white solid;
+            border-radius: 25%;
+            margin-left: 20px;
+            margin-top: 10px;
+        }
         #album.show {
             animation: fade-in 0.25s forwards;
         }
         #album.hide {
+            animation: fade-out 0.25s forwards;
+        }
+        #volume {
+            width: 70px;
+            height: 50px;
+            opacity: 1;
+            margin-right: 20px;
+            margin-top: 10px;
+        }
+        #volume.show {
+            animation: fade-in 0.25s forwards;
+        }
+        #volume.hide {
             animation: fade-out 0.25s forwards;
         }
     </style>
@@ -58,7 +71,7 @@
     <script>
         const main = document.querySelector("#main");
         const album = document.querySelector("#album");
-        const bars = document.querySelectorAll(".bar");
+        const volume = document.querySelector("#volume");
         let isHovered = false;
 
         main.addEventListener("mouseenter", () =>{
@@ -66,10 +79,8 @@
             main.classList.add("hovered")
             album.classList.remove("hide","show")
             album.classList.add("show")
-            bars.forEach(bar => {
-                bars.classList.remove("hide", "show");
-                bars.classList.add("show");
-            });
+            volume.classList.remove("hide", "show");
+            volume.classList.add("show");
         });
         main.addEventListener("mouseleave", () =>{
             isHovered = false;
@@ -77,10 +88,8 @@
             main.classList.remove("hovered")
             album.classList.remove("show","hide")
             album.classList.add("hide")
-            bars.forEach(bar => {
-                bars.classList.remove("show", "hide");
-                bars.classList.add("hide");
-            });
+            volume.classList.remove("show", "hide");
+            volume.classList.add("hide");
         });
         main.addEventListener("click", () =>{
             if (isHovered) {
