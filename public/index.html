@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        #main {
+            width: 250px;
+            height: 70px;
+            margin: 0 auto;
+            border-radius: 35px;
+            background-color: black;
+            transition: all 0.25s ease-in-out;
+        }
+        #main:hover {
+            width: 400px;
+        }
+        #album {
+            width: 50px;
+            height: 50px;
+            opacity: 1;
+            border: 1px white solid;
+            border-radius: 25%;
+            position: relative;
+            top: 10px;
+            left: 20px;
+        }
+        @keyframes fade-in {
+            0% {opacity: 0;}
+            50% {opacity: 0.5;}
+            100% {opacity: 1;}
+        }
+        @keyframes fade-out {
+            0% {opacity: 1;}
+            50% {opacity: 0.5;}
+            100% {opacity: 0;}
+        }
+        #album.show {
+            animation: fade-in 0.25s forwards;
+        }
+        #album.hide {
+            animation: fade-out 0.25s forwards;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <img src="album.png" alt="album" id="album">
+    </div>
+    <script>
+        const main = document.querySelector("#main");
+        const album = document.querySelector("#album");
+
+        main.addEventListener("mouseenter", () =>{
+            album.classList.remove("hide")
+            album.classList.add("show")
+        });
+        main.addEventListener("mouseleave", () =>{
+            album.classList.remove("show")
+            album.classList.add("hide")
+        });
+        main.addEventListener("click", () =>{
+            
+        });
+    </script>
+</body>
+</html>
