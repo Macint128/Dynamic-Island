@@ -109,8 +109,10 @@
             main.classList.add("hovered")
             album.classList.remove("hide","show")
             album.classList.add("show")
-            bar.classList.remove("hide","show")
-            bar.classList.add("show")
+            bars.forEach(bar => {
+                bar.classList.remove("hide", "show");
+                bar.classList.add("show");
+            });
         });
         main.addEventListener("mouseleave", () =>{
             isHovered = false;
@@ -118,8 +120,10 @@
             main.classList.remove("hovered")
             album.classList.remove("show","hide")
             album.classList.add("hide")
-            bar.classList.remove("show","hide")
-            bar.classList.add("hide")
+            bars.forEach(bar => {
+                bar.classList.remove("show", "hide");
+                bar.classList.add("hide");
+            });
         });
         main.addEventListener("click", () =>{
             if (isHovered) {
