@@ -115,8 +115,8 @@
             album.classList.remove("hide","show")
             album.classList.add("show")
             bars.forEach(bar => {
-                bar.classList.remove("hide", "show");
-                bar.classList.add("show");
+                bars.classList.remove("hide", "show");
+                bars.classList.add("show");
             });
         });
         main.addEventListener("mouseleave", () =>{
@@ -126,8 +126,8 @@
             album.classList.remove("show","hide")
             album.classList.add("hide")
             bars.forEach(bar => {
-                bar.classList.remove("show", "hide");
-                bar.classList.add("hide");
+                bars.classList.remove("show", "hide");
+                bars.classList.add("hide");
             });
         });
         main.addEventListener("click", () =>{
