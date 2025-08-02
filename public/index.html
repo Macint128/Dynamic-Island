@@ -18,6 +18,14 @@
             display: flex;
             position: relative;
         }
+        #main.hovered {
+            width: 300px;
+        }
+        #main.big {
+            width: 400px;
+            height: 300px;
+            border-radius: 50px;
+        }
         #middle {
             width: 160px;
             height: 70px;
@@ -31,13 +39,9 @@
             color: white;
             font-family: 'Arial', sans-serif;
         }
-        #main.hovered {
-            width: 300px;
-        }
-        #main.big {
-            width: 400px;
-            height: 300px;
-            border-radius: 50px;
+        #middle {
+            position: relative;
+            top: 30px;
         }
         @keyframes fade-in {
             0% {opacity: 0;}
