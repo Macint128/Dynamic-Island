@@ -31,7 +31,7 @@
         #main.big {
             width: 400px;
             height: 300px;
-            border-radius: 90px;
+            border-radius: 50px;
         }
         @keyframes fade-in {
             0% {opacity: 0;}
@@ -57,7 +57,7 @@
             opacity: 1;
             border: 1px white solid;
             border-radius: 25%;
-            transition: all 0.25s ease-in-out;
+            transtion: all 0.25s ;
             position: relative;
             left: 20px;
             top: 10px;
@@ -69,12 +69,10 @@
             animation: fade-out 0.25s forwards;
         }
         #album.big {
-            width: 90px;
-            height: 90px;
-            border-radius: 10px;
-            position: relative;
-            left: 30px;
             top: 30px;
+            left: 30px;
+            width: 80px;
+            height: 80px;
         }
         #volume {
             width: 60px;
@@ -93,7 +91,6 @@
         #volume.big {
             width: 100px;
             height: 90px;
-            opacity: 1;
             position: relative;
             right: 30px;
             top: 30px;
@@ -122,8 +119,10 @@
         });
         main.addEventListener("mouseleave", () =>{
             isHovered = false;
-            main.classList.remove("hovered", "big")
-            album.classList.remove("show","hide","big")
+            main.classList.remove("big")
+            main.classList.remove("hovered")
+            album.classList.remove("big")
+            album.classList.remove("show","hide")
             album.classList.add("hide")
             volume.classList.remove("show", "hide");
             volume.classList.add("hide");
@@ -135,7 +134,8 @@
             }
             main.classList.add("big")
             album.classList.add("big")
+            volume.classList.add("big")
         });
     </script>
 </body>
-</html> 
+</html>
