@@ -31,7 +31,7 @@
         #main.big {
             width: 400px;
             height: 300px;
-            border-radius: 50px;
+            border-radius: 90px;
         }
         @keyframes fade-in {
             0% {opacity: 0;}
@@ -57,6 +57,7 @@
             opacity: 1;
             border: 1px white solid;
             border-radius: 25%;
+            transition: all 0.25s ease-in-out;
             position: relative;
             left: 20px;
             top: 10px;
@@ -68,10 +69,11 @@
             animation: fade-out 0.25s forwards;
         }
         #album.big {
-            top: 30px;
+            width: 70px;
+            height: 70px;
+            position: relative;
             left: 30px;
-            width: 80px;
-            height: 80px;
+            top: 30px;
         }
         #volume {
             width: 60px;
@@ -111,10 +113,8 @@
         });
         main.addEventListener("mouseleave", () =>{
             isHovered = false;
-            main.classList.remove("big")
-            main.classList.remove("hovered")
-            album.classList.remove("big")
-            album.classList.remove("show","hide")
+            main.classList.remove("hovered", "big")
+            album.classList.remove("show","hide","big")
             album.classList.add("hide")
             volume.classList.remove("show", "hide");
             volume.classList.add("hide");
@@ -129,4 +129,5 @@
         });
     </script>
 </body>
-</html>
+</html> 
+<!-- git commit -am "commit" -->
