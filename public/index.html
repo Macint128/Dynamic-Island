@@ -42,6 +42,14 @@
             50% {opacity: 0.5;}
             100% {opacity: 0;}
         }
+        @keyframes colorShift {
+            0%   { filter: hue-rotate(90deg) opacity(1); }
+            25%  { filter: hue-rotate(30deg) opacity(0.8); }
+            35%  { filter: hue-rotate(60deg) opacity(0.9); }
+            60%  { filter: hue-rotate(180deg) opacity(1); }
+            100% { filter: hue-rotate(90deg) opacity(1); }
+        }
+
         #album {
             width: 50px;
             height: 50px;
@@ -67,7 +75,7 @@
             top: 10px;
         }
         #volume.show {
-            animation: fade-in 0.25s forwards;
+            animation: fade-in 0.25s forwards, colorShift 2s infinite;
         }
         #volume.hide {
             animation: fade-out 0.25s forwards;
