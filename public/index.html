@@ -110,8 +110,8 @@
     <div id="main">
         <img src="album.png" alt="album" id="album">
         <div id="middle"></div>
-        <div id="bottom-control"></div>
         <img src="volume.png" alt="volume" id="volume">
+        <div id="bottom-control"></div>
     </div>
     <script>
         const main = document.querySelector("#main");
@@ -137,7 +137,7 @@
             album.classList.add("hide")
             volume.classList.remove("show", "hide", "big");
             volume.classList.add("hide");
-            middle.innerHTML = "";
+            bottom.innerHTML = "";
         });
         main.addEventListener("click", () =>{
             if (isHovered) {
