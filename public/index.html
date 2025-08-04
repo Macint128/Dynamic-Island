@@ -110,6 +110,15 @@
             right: 30px;
             top: 30px;
         }
+        #center-control {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: 10px auto;
+            color: white;
+            font-family: sans-serif;
+        }
         #bottom-control {
             margin: 0 auto;
             position: relative;
@@ -136,56 +145,18 @@
             <div id="middle"></div>
             <img src="assets/volume.png" alt="volume" id="volume">
         </div>
+        <div id="center-control">
+            <span id="current-time">0:00</span>
+            <input type="range" id="slider" min="0" max="254" value="0">
+            <span id="remaining-time">-4:14</span>
+        </div>
+
         <div id="bottom-control">
             <span>
                 <button id="favorite"></button>
             </span>
         </div>
     </div>
-    <script>
-        const main = document.querySelector("#main");
-        const album = document.querySelector("#album");
-        const volume = document.querySelector("#volume");
-        const middle = document.querySelector("#middle");
-        const favorite = document.querySelector("#favorite");
-        let isHovered = false;
-
-        main.addEventListener("mouseenter", () =>{
-            isHovered = true;
-            main.classList.add("hovered");
-            album.classList.remove("hide","show");
-            album.classList.add("show");
-            volume.classList.remove("hide", "show");
-            volume.classList.add("show");
-        });
-        main.addEventListener("mouseleave", () =>{
-            isHovered = false;
-            main.classList.remove("big");
-            main.classList.remove("hovered");
-            album.classList.remove("big");
-            album.classList.remove("show","hide");
-            album.classList.add("hide");
-            volume.classList.remove("show", "hide", "big");
-            volume.classList.add("hide");
-            favorite.classList.remove("show");
-            middle.innerHTML = "";
-        });
-        main.addEventListener("click", () =>{
-            if (isHovered) {
-                isHovered = false;
-                main.classList.remove("hovered")
-            }
-            main.classList.add("big");
-            album.classList.add("big");
-            volume.classList.add("big");
-            favorite.classList.add("show");
-            middle.innerHTML = `
-                <div style="color: white; text-align: center;">
-                    <h3 style="margin: 0; font-size: 18px;">Heave Ho</h3>
-                    <p style="margin: 0; font-size: 14px; opacity: 0.7;">Boom Kitty & Teminite</p>
-                </div>
-            `;
-        });
-    </script>
+    <script src="music.js"></script>
 </body>
 </html>
