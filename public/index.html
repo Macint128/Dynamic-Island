@@ -16,6 +16,7 @@
             background-color: black;
             transition: all 0.25s ease-in-out;
             display: flex;
+            flex-direction: column;
             position: relative;
         }
         #main.hovered {
@@ -25,6 +26,16 @@
             width: 400px;
             height: 300px;
             border-radius: 50px;
+        }
+
+        #top-control {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 70px;
+            position: relative;
         }
         #middle {
             width: 160px;
@@ -105,9 +116,9 @@
             top: 30px;
         }
         #bottom-control {
-            margin: 0 auto;
+            margin-top: 20px;
             position: relative;
-            top: 60px;
+            top: 0;
         }
         #faivorite {
             width: 50px;
