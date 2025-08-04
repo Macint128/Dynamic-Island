@@ -1,31 +1,22 @@
-const slider = document.getElementById('slider');
-const sliderStart = document.getElementById('slider-start');
-const sliderMiddle = document.getElementById('slider-middle');
-const sliderEnd = document.getElementById('slider-end');
-const sliderContainer = document.getElementById('slider-container');
+const fill = document.getElementById('slider-fill');
+const middle = document.getElementById('slider-middle');
 
-function updateSlider() {
-  const max = slider.max;
-  const val = slider.value;
+let progress = 0;
 
-  const containerWidth = sliderContainer.clientWidth;
+function updateSlider(p) {
+  const totalWidth = 300;
+  const max = 254;
+  const progressWidth = (p / max) * totalWidth;
 
-  // 진행된 길이 (px)
-  const progressWidth = (val / max) * containerWidth;
+  const cap = 12;
+  const middleWidth = Math.max(progressWidth - cap * 2, 0);
 
-  // start 너비 고정 20px, end 너비 20px
-  // middle은 progressWidth - start 너비
-  sliderStart.style.width = "20px";
-  sliderStart.style.left = "0";
-
-  sliderMiddle.style.left = "20px";
-  sliderMiddle.style.width = `${Math.max(progressWidth - 20, 0)}px`;
-
-  sliderEnd.style.left = `${progressWidth}px`;
-  sliderEnd.style.width = "20px";
+  fill.style.width = progressWidth + "px";
+  middle.style.width = middleWidth + "px";
 }
 
-slider.addEventListener('input', updateSlider);
-
-
-updateSlider();
+setInterval(() => {
+  progress++;
+  if (progress > 254) progress = 0;
+  updateSlider(progress);
+}, 100);
