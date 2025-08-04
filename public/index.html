@@ -76,7 +76,8 @@
             border: 1px white solid;
             border-radius: 25%;
             transition: all 0.25s ease-in-out;
-            position: static;
+            position: relative;
+            left: 20px;
         }
         #album.show {
             animation: fade-in 0.25s forwards;
@@ -95,7 +96,8 @@
             height: 50px;
             opacity: 0;
             transition: all 0.25s ease-in-out;
-            position: static;
+            position: relative;
+            right: 20px;
         }
         #volume.show {
             animation: fade-in 0.25s forwards, colorShift 2s infinite;
