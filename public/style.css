@@ -15,12 +15,12 @@
 }
 
 #main.hovered {
-  width: 14.3rem;
+  width: 20rem;
 }
 
 #main.big {
-  width: 14.3rem;
-  height: 9.3rem;
+  width: 20rem;
+  height: 20.25rem;
   border-radius: 50px;
 }
 
