@@ -23,7 +23,7 @@ main.addEventListener("mouseleave", () => {
   album.classList.add("hide");
   volume.classList.remove("show", "hide", "big");
   volume.classList.add("hide");
-  bottom.classList.remove("show");
+  favorite.classList.remove("show");
   middle.innerHTML = "";
 });
 
@@ -35,7 +35,7 @@ main.addEventListener("click", () => {
   main.classList.add("big");
   album.classList.add("big");
   volume.classList.add("big");
-  bottom.classList.add("show");
+  favorite.classList.add("show");
   middle.innerHTML = `
     <div style="color: white; text-align: center;">
       <h3 style="margin: 0; font-size: 18px;">Heave Ho</h3>
