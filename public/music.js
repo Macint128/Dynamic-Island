@@ -2,6 +2,7 @@ const main = document.querySelector("#main");
 const album = document.querySelector("#album");
 const volume = document.querySelector("#volume");
 const middle = document.querySelector("#middle");
+const bottom = document.querySelector("#bottom-control");
 const favorite = document.querySelector("#favorite");
 
 let isHovered = false;
@@ -22,7 +23,7 @@ main.addEventListener("mouseleave", () => {
   album.classList.add("hide");
   volume.classList.remove("show", "hide", "big");
   volume.classList.add("hide");
-  favorite.classList.remove("show");
+  bottom.classList.remove("show");
   middle.innerHTML = "";
 });
 
@@ -34,7 +35,7 @@ main.addEventListener("click", () => {
   main.classList.add("big");
   album.classList.add("big");
   volume.classList.add("big");
-  favorite.classList.add("show");
+  bottom.classList.add("show");
   middle.innerHTML = `
     <div style="color: white; text-align: center;">
       <h3 style="margin: 0; font-size: 18px;">Heave Ho</h3>
