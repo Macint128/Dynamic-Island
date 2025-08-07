@@ -2,11 +2,15 @@
   box-sizing: border-box;
 }
 
+body {
+  font-size: 16px;
+}
+
 #main {
   width: 11rem;
   height: 5rem;
   margin: 0 auto;
-  border-radius: 2.75rem;
+  border-radius: 5rem;
   background-color: black;
   transition: all 0.25s ease-in-out;
   display: flex;
@@ -20,7 +24,7 @@
 
 #main.big {
   width: 20rem;
-  height: 20.25rem; /* 368px */
+  height: 20.25rem;
   border-radius: 6rem;
 }
 
@@ -29,7 +33,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  height: 10.125rem; /* 184px */
+  height: 5.5rem;
   width: 100%;
 }
 
@@ -46,7 +50,7 @@
   color: white;
   font-family: 'Arial', sans-serif;
   position: relative;
-  top: 1.65rem; /* 30px */
+  top: 30px;
 }
 
 @keyframes fade-in {
@@ -70,14 +74,14 @@
 }
 
 #album {
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 50px;
+  height: 50px;
   opacity: 0;
-  border: 0.055rem solid white;
+  border: 1px white solid;
   border-radius: 25%;
   transition: all 0.25s ease-in-out;
   position: relative;
-  left: 1.1rem;
+  left: 20px;
 }
 
 #album.show {
@@ -89,19 +93,19 @@
 }
 
 #album.big {
-  top: 1.65rem;
-  left: 1.65rem;
-  width: 4.4rem;  /* 80px */
-  height: 4.4rem;
+  top: 30px;
+  left: 30px;
+  width: 80px;
+  height: 80px;
 }
 
 #volume {
-  width: 3.3rem;  /* 60px */
-  height: 2.75rem; /* 50px */
+  width: 60px;
+  height: 50px;
   opacity: 0;
   transition: all 0.25s ease-in-out;
   position: relative;
-  right: 1.1rem;
+  right: 20px;
 }
 
 #volume.show {
@@ -113,40 +117,40 @@
 }
 
 #volume.big {
-  position: relative;
-  right: 1.65rem;
-  top: 1.65rem;
+    position: relative;
+    right: 30px;
+    top: 30px;
 }
 
 #center-control {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-  margin: 0.55rem auto;
-  color: white;
-  font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 10px auto;
+    color: white;
+    font-family: sans-serif;
 }
 
 #bottom-control {
-  width: 11rem; /* 200px */
-  height: 8.25rem; /* 150px */
+  width: 200px;
+  height: 150px;
   margin: 0 auto;
   position: relative;
-  top: 3.3rem; /* 60px */
+  top: 60px;
   display: none;
 }
 
-#bottom-control.show {
-  display: block;
-}
-
 #favorite {
-  width: 2.75rem; /* 50px */
-  height: 2.75rem;
+  width: 50px;
+  height: 50px;
   border: none;
   transition: all 0.25s ease-in-out;
   background-color: transparent;
   background-image: url("assets/Favorite.png");
-  background-size: 2.75rem 2.75rem;
+  background-size: 50px 50px;
+}
+
+#bottom-control.show {
+  display: block;
 }
